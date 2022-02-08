@@ -5,14 +5,13 @@ namespace Practica_Metodos
     {
         static void Main(string[] args)
         {
-            mensajeEnPantalla();
+            SumaNumeros(5,6);
 
-            Console.WriteLine("Mensaje desde el main");
         }
 
-        static void mensajeEnPantalla()
+       static void SumaNumeros(int num1, int num2)
         {
-            Console.WriteLine("Mensaje desde el método mensajeEnPatalla");
+            Console.WriteLine("La suma de los números es: " + (num1 + num2));
         }
     }
 }
