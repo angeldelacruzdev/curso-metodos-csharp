@@ -23,13 +23,19 @@ namespace Practica_Metodos
                 try {
                     mi_numero = int.Parse(Console.ReadLine());
                 }
-                catch (FormatException ex)
+                catch (Exception e) when(e.GetType() != typeof (FormatException))   
                 {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine("Has introducido un valor número muy alto.");
+                   
+                    mi_numero = 0;
+                } 
+                catch(FormatException e)
+                {
+
                     Console.WriteLine("No has introducido un valor numérico válido");
                     mi_numero = 0;
                 }
-
-            
 
                 if (mi_numero > aleatorio) Console.WriteLine("El número es más bajo");
 
