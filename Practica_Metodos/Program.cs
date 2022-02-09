@@ -3,19 +3,14 @@ namespace Practica_Metodos
 {
     class Program
     {
-        //Campos de clase
-        int numero1 = 5;
-        int numero2 = 7;
-
+       
         static void Main(string[] args)
         {
-  
+            Console.WriteLine(Suma(5, 6, 22));
         }
- 
-        //Suma dos valores
-        static int Suma(int n, int a) => n + a;
- 
-        static int Suma(int n3, int n4, int n5) => n3 + n4 + n5;
-            
+
+        //Parámetro opcionales
+        private static double Suma(int v1, double v2, double v3 = 0) => v1 + v2 + v3;
     }
 }
+ 
